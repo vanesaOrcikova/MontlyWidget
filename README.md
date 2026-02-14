@@ -1,4 +1,4 @@
-<img width="468" height="112" alt="image" src="https://github.com/user-attachments/assets/eea9157f-d840-4afc-a931-23f95abaf4c5" />💡 Idea
+💡 Idea
 The application is an iOS app developed using SwiftUI, focused on supporting mental well-being and encouraging daily self-reflection.
 Its main purpose is to provide users with a simple and calming space for motivation, reflection, and building positive habits without overwhelming them with too much content.
 The app is designed to be minimalistic, user-friendly, and structured around consistent daily engagement.
@@ -59,10 +59,7 @@ Because content is tightly integrated with both the calendar system and the widg
 8.	The cycle repeats the next day with new content
 
 
-![IMG_7277](https://github.com/user-attachments/assets/bbc5f32b-d4c9-4507-9803-24cee2528567)
-![IMG_7278](https://github.com/user-attachments/assets/9681afe6-1c9d-40c3-81d6-20e6cd774b69)
-![IMG_7279](https://github.com/user-attachments/assets/3f841966-e474-4c4a-a40c-cf92a6e21d94)
-![IMG_7280](https://github.com/user-attachments/assets/b4ec3cf5-dd62-4319-b5a8-60a81ab6b983)
+
 
 
 
