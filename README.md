@@ -72,11 +72,11 @@ Because content is tightly integrated with both the calendar system and the widg
     •	process repeats the next day with new generated content
 
 
+![IMG_7277](https://github.com/user-attachments/assets/6296df8e-869e-4467-bc6c-e31f45d3efb6)
 
-
-
-
-
+![IMG_7278](https://github.com/user-attachments/assets/70cb64f4-7aa3-4abf-92a3-ee13e9907b16)
+![IMG_7279](https://github.com/user-attachments/assets/4c606133-76d1-4bf9-a4a8-fddefb4bd2a3)
+![IMG_7280](https://github.com/user-attachments/assets/4d27af71-9c28-44d5-a927-ffe42a426cfc)
 
 
 
