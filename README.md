@@ -1,75 +1,58 @@
-💡 Idea
-
-The application is an iOS app developed using SwiftUI, focused on supporting mental well-being and encouraging daily self-reflection.
-Its main purpose is to provide users with a simple and calming space for motivation, reflection, and building positive habits without overwhelming them with too much content. The app is designed to be minimalistic, user-friendly, and structured around consistent daily engagement.
-
-
-🏗️ Architecture & Structure
-
-The project is built using a modular approach with cleanly separated SwiftUI views and a well-structured data model.
-The main development focus is placed on:
-
-    •	maintainability and scalability
-    •	simplicity in UI/UX
-    •	clear separation of features
-    •	clean and structured codebase
-
-
 🗓️ WidgetKit Integration 
 
-The application integrates WidgetKit to provide a calendar-based widget that enhances daily accessibility and user engagement.
-The widget:
+The widget was implemented using the WidgetKit framework combined with SwiftUI. The integration of the widget was chosen because widgets are a modern feature of iOS applications and many users use them daily as part of their home screen. The widget therefore works as a simple calendar and supports regular interaction with the application without the need to manually search for the app in the menu.
 
-    •	displays the current day using a dynamically changing emoji
-    •	automatically updates every day
-    •	works as a quick entry point into the application
-    •	opens a detailed calendar view when tapped
-  
-This allows users to interact with the app directly from their home screen, making daily check-ins more natural and effortless.
+📌 Widget Content and Visual Elements
 
-✅ Core Features
+The widget displays:
 
-📅 Calendar-Based System
+    • the current day of the week
+    • the current date (dominant day number)
+    • an emoji as a visual element representing the day
+    • a subtle background calendar view of the month
 
-The app is structured around a calendar logic, where each day represents a unique entry point. The calendar functions as the main navigation element and encourages users to return regularly.
+🎲 Dynamic Emoji System (Random Selection)
 
+The widget contains a set of multiple emojis stored in the application. Every day, one emoji is automatically selected randomly from this set, ensuring variability and preventing the widget from appearing static.
 
-🌟 Daily Generated Content
+⏱️ Automatic Widget Updates
 
-Each day, the application generates exactly one content type, ensuring the experience stays minimal and consistent.
-Daily content can be:
+The widget uses the timeline mechanism in WidgetKit. The update is set so that the widget refreshes automatically every day. This ensures:
 
-    •	a motivational message
-    •	a simple daily challenge
-    •	a reflection question
-    
-🔄 Consistent Daily Engagement
-Because content is tightly integrated with both the calendar system and the widget, the application naturally supports:
+    • correct display of the current date
+    • automatic emoji change
+    • consistent functionality without the need for manual refresh
 
-    •	daily user interaction
-    •	habit-building routines
-    •	structured self-reflection
+📅 Calendar Logic of the Application
 
-⚙️ Technologies Used
+The main functionality of the application is based on a calendar system, which serves as the main navigation element. Using the Calendar API, the application generates the correct structure of days for the current month and allows switching between months. Each day represents an individual content unit. After selecting a date, the day is stored as an active state and the application displays or generates the corresponding daily content (motivation, challenge, or reflection).
 
-    •	SwiftUI – UI development and modular screen structure
-    •	WidgetKit – home screen widget integration
-    •	Calendar Logic – date-driven content generation and navigation
-    •	Dynamic Emoji System – emoji updates automatically each day
-    •	Clean Data Model – structured data handling for daily content
+🌟 Daily Content Generation (Motivation / Challenge / Reflection)
 
+The application follows the principle “one day = one content” to prevent overwhelming the user with multiple activities at once. Daily content is selected from predefined lists and can be:
 
-📌 App Flow Overview
+    • Motivation – a short encouraging message
+    • Mini challenge – a simple daily task
+    • Reflection:
+            o a reflective question is generated for a specific day
+            o after clicking “Open reflection”, a white canvas (text field) opens
+            o the user can write their own answer
+            o the answer is saved and remains linked to the specific day
 
-    •	the user sees the widget on the home screen
-    •	current day is shown using a dynamic emoji
-    •	widget refreshes automatically every day
-    •	the user taps the widget
-    •	app opens directly into the detailed calendar view
-    •	the user selects a specific day
-    • one daily-generated content type is displayed:
-        •	motivational message / daily challenge / reflection question
-    •	process repeats the next day with new generated content
+🔒 Locking Future Days
+
+The application uses date validation with Date() and Calendar, comparing the selected day with the current system date. If the user selects a future day, the daily content is not displayed, an informational card “Unlocks at midnight” appears, and it is not possible to mark the day as completed.
+ 
+✅ Marking Content as Completed and Visual Changes
+
+The user can mark daily content as completed using the “Mark as completed” button. After pressing the button, the state of the selected day is updated in the data model (e.g., completed = true) and the change is immediately reflected in the user interface.
+The UI update includes:
+    • displaying the status “completed” on the content card
+    • displaying a completion indicator in the calendar (green dot)
+
+🔥 Streak System
+
+The streak system was implemented as a calculation logic based on the application’s data model. Each day contains a state value (e.g., completed) which determines whether the daily content has been completed. Based on these stored values, the application evaluates the number of completed days in the current month when loading the calendar.
 
 
 ![IMG_7277](https://github.com/user-attachments/assets/91d3188d-fe5a-433f-b6db-2dee032fe5b1)
