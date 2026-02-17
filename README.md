@@ -47,6 +47,7 @@ The application uses date validation with Date() and Calendar, comparing the sel
 
 The user can mark daily content as completed using the “Mark as completed” button. After pressing the button, the state of the selected day is updated in the data model (e.g., completed = true) and the change is immediately reflected in the user interface.
 The UI update includes:
+
     • displaying the status “completed” on the content card
     • displaying a completion indicator in the calendar (green dot)
 
